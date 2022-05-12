@@ -1,5 +1,5 @@
 :root {
-    --widthSlider: 40rem;
+    --widthSlider: 33rem;
     --heightSlider: calc(var(--widthSlider)*1.2);
     box-sizing: border-box;
 }
