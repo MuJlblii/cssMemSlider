@@ -1,8 +1,7 @@
 :root {
-    --widthSlider: 30rem;
-    --heightSlider: 30rem;
+    --widthSlider: 40rem;
+    --heightSlider: calc(var(--widthSlider)*1.2);
     box-sizing: border-box;
-    background-color: slategrey;
 }
 
 * {
@@ -10,35 +9,43 @@
     margin: 0;
 }
 
-.container {
- /* background-color: slategrey; */
-}
+/* .container {
+  background-color: slategrey; 
+} */
 input {
     width: 0;
     height: 0;
 }
 
 .wrapper {
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
     display: flex;
     flex-direction: column;
-    width: 60rem;
+    max-width: 60rem;
     margin-left: auto;
     margin-right: auto;
+    background-color: rgba(59, 59, 59, 1);
+    padding: 3rem;
+    border-radius: 1.2rem;
 }
 h1 {
     text-align: center;
+    color: beige;
 }
 
 .slider-wrapper {
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
     display: flex;
     flex-direction: row;
     align-self: center;
     overflow: hidden;
-    width: 30rem;
+    max-width: var(--widthSlider);
+    height: calc(var(--heightSlider)*1.2);
     /* float: left; */
 }
+.slider-wrapper > div {
+    border-radius: 0.5rem;
+} 
 .slide1 {
     /* float: left; */
     width: 0;
@@ -68,6 +75,7 @@ h1 {
     justify-content: space-between;
     padding-top: 2rem;
     font-size: 0;
+    color: beige;
 }
 
 .navigation label div {
@@ -129,7 +137,7 @@ h1 {
 #radio2:checked ~ .wrapper .slider-wrapper .slide2 {
     width: var(--widthSlider);
     height: var(--heightSlider);
-    transform: scale(1,1);
+    /* transform: scale(1,1); */
     transition: all 0.3s;
 }
 #radio2:checked ~ .wrapper .bottom-wrapper .bottom .text2 {
@@ -179,4 +187,12 @@ h1 {
 #radio4:checked ~ .wrapper .bottom-wrapper .bottom .text4 {
     transition: all 0.3s;
     font-size: 2rem;
+}
+
+@media screen and (max-width: 46.88rem) {
+    :root {
+        --widthSlider: 18.75rem;
+        --heightSlider: 25.75rem;
+        box-sizing: border-box;
+    }
 }
