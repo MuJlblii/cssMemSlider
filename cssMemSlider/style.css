@@ -196,6 +196,9 @@ h1 {
     :root {
         --widthSlider: 18.75rem;
     }
+    .wrapper {
+        padding: 1rem;
+    }
     .bottom-wrapper {
         flex-direction: column-reverse;
     }
