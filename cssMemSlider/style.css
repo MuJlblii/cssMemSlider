@@ -117,7 +117,7 @@ h1 {
 #radio1:checked ~ .wrapper .bottom-wrapper .bottom .text1 {
     transition: all 0.3s;
     font-size: 1.6rem;
-    padding-top: 0.6rem;
+    padding-top: 0.75rem;
 }
 
 
@@ -141,7 +141,7 @@ h1 {
 #radio2:checked ~ .wrapper .bottom-wrapper .bottom .text2 {
     transition: all 0.3s;
     font-size: 1.6rem;
-    padding-top: 0.6rem;
+    padding-top: 0.75rem;
 }
 
 /* 3 slide button */
@@ -165,7 +165,7 @@ h1 {
 #radio3:checked ~ .wrapper .bottom-wrapper .bottom .text3 {
     transition: all 0.3s;
     font-size: 1.6rem;
-    padding-top: 0.6rem;
+    padding-top: 0.75rem;
 }
 
 /* 4 slide button */
@@ -189,7 +189,7 @@ h1 {
 #radio4:checked ~ .wrapper .bottom-wrapper .bottom .text4 {
     transition: all 0.3s;
     font-size: 1.6rem;
-    padding-top: 0.6rem;
+    padding-top: 0.75rem;
 }
 
 @media screen and (max-width: 46.88rem) {
