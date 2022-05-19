@@ -1,0 +1,218 @@
+:root {
+    --widthSlider: 33rem;
+    --heightSlider: calc(var(--widthSlider)*1.2);
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    width: 0;
+    height: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(59, 59, 59, 1);
+    padding: 3rem;
+    border-radius: 1.2rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(59, 59, 59, 0.5); ;
+}
+h1 {
+    text-align: center;
+    color: beige;
+}
+
+.slider-wrapper {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center;
+    max-width: var(--widthSlider);
+    height: var(--heightSlider);
+
+}
+.slider-wrapper > div {
+    border-radius: 0.5rem;
+    justify-self: center;
+} 
+.slide1 {
+    width: 0;
+    height: 0;
+    background: no-repeat center/100% url(../cssMemSlider/assets/photo_2022-05-02_20-33-58.jpg);
+}
+.slide2 {
+    width: 0;
+    height: 0;
+    background: no-repeat center/100% url(../cssMemSlider/assets/photo_2022-05-05_17-54-21.jpg);
+}
+.slide3 {
+    width: 0;
+    height: 0;
+    background: no-repeat center/100% url(../cssMemSlider/assets/photo_2022-05-06_22-58-03.jpg);
+}
+.slide4 {
+    width: 0;
+    height: 0;
+    background: no-repeat center/100% url(../cssMemSlider/assets/photo_2022-05-09_21-45-13.jpg);
+}
+
+.bottom-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2rem;
+    font-size: 0;
+    color: beige;
+}
+
+.navigation label div {
+    width: calc(var(--widthSlider)*0.0375);
+    height: calc(var(--widthSlider)*0.0375);
+    border-radius: 50%;
+    background-color: lightskyblue;
+    box-shadow: 0.1rem 0.1rem 0.1rem rgba(135, 206, 250, 0.3);
+}
+.navigation label {
+    padding-left: 0.75rem;
+    padding-top: 1rem;
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+}
+.navigation label:active {
+    background-color: lightskyblue;
+    transition: all 0.3s;
+}
+
+.navigation label:hover > div {
+    background-color: white;
+    box-shadow: 0.1rem 0.1rem 0.1rem rgba(255, 255, 255, 0.3);
+}
+
+
+/* 1 slide button */
+#radio1:checked ~ .wrapper .navigation .control1 div {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0.2rem solid lightskyblue;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+#radio1:checked ~ .wrapper .navigation .control1:hover > div {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0.2rem solid white;
+    box-sizing: border-box;
+}
+#radio1:checked ~ .wrapper .slider-wrapper #slide1 {
+    width: var(--widthSlider);
+    height: var(--heightSlider);
+    transform: scale(1,1);
+    transition: all 0.3s;
+}
+#radio1:checked ~ .wrapper .bottom-wrapper .bottom .text1 {
+    transition: all 0.3s;
+    font-size: 1.6rem;
+    padding-top: 0.75rem;
+}
+
+
+/* 2 slide button */
+#radio2:checked ~ .wrapper .navigation .control2 div {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0.2rem solid lightskyblue;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+#radio2:checked ~ .wrapper .navigation .control2:hover > div {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0.2rem solid white;
+    box-sizing: border-box;
+}
+#radio2:checked ~ .wrapper .slider-wrapper .slide2 {
+    width: var(--widthSlider);
+    height: var(--heightSlider);
+    transition: all 0.3s;
+}
+#radio2:checked ~ .wrapper .bottom-wrapper .bottom .text2 {
+    transition: all 0.3s;
+    font-size: 1.6rem;
+    padding-top: 0.75rem;
+}
+
+/* 3 slide button */
+#radio3:checked ~ .wrapper .navigation .control3 div {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0.2rem solid lightskyblue;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+#radio3:checked ~ .wrapper .navigation .control3:hover > div {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0.2rem solid white;
+    box-sizing: border-box;
+}
+#radio3:checked ~ .wrapper .slider-wrapper #slide3 {
+    width: var(--widthSlider);
+    height: var(--heightSlider);
+    transform: scale(1,1);
+    transition: all 0.3s;
+}
+#radio3:checked ~ .wrapper .bottom-wrapper .bottom .text3 {
+    transition: all 0.3s;
+    font-size: 1.6rem;
+    padding-top: 0.75rem;
+}
+
+/* 4 slide button */
+#radio4:checked ~ .wrapper .navigation .control4 div {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0.2rem solid lightskyblue;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+#radio4:checked ~ .wrapper .navigation .control4:hover > div {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0.2rem solid white;
+    box-sizing: border-box;
+}
+#radio4:checked ~ .wrapper .slider-wrapper #slide4 {
+    transform: scale(1) ;
+    transition: all 0.3s;
+    width: var(--widthSlider);
+    height: var(--heightSlider);
+}
+#radio4:checked ~ .wrapper .bottom-wrapper .bottom .text4 {
+    transition: all 0.3s;
+    font-size: 1.6rem;
+    padding-top: 0.75rem;
+}
+
+@media screen and (max-width: 46.88rem) {
+    :root {
+        --widthSlider: 18.75rem;
+    }
+    .wrapper {
+        padding: 1rem;
+    }
+    .bottom-wrapper {
+        flex-direction: column-reverse;
+    }
+    .navigation {
+        align-self: center;
+    }
+    .navigation label {
+        width: 1.45rem;
+        height: 1.45rem;
+        padding-top: 1rem;
+    }
+}
